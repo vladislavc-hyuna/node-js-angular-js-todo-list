@@ -17,7 +17,7 @@ var taskApp = angular.module('TaskApp', ['ngRoute'])
      controllerAs: "task"
   })
   .when("/tasks/:id/edit", {
-    templateUrl: "../new_task.html",
+    templateUrl: "../edit.html",
     controller: "EditTaskController",
     controllerAs: "task"
   })

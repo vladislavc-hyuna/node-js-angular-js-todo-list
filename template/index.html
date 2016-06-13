@@ -59,6 +59,12 @@
           return false;
         });
       });
+
+       $(document).on('click', '#submit-form', function(){
+        $(this.form).submit(function(event){
+          return false;
+        });
+      });
     });
   
     </script>

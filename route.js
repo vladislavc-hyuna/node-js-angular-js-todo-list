@@ -10,7 +10,8 @@ Route.prototype.init = function(connection) {
 	    });
 	  })
 	  .post(function(req, res) {
-	  	connection.query('INSERT INTO `nodejs_test_db`.`vladc_todo_list` (`title`, `description`) VALUES ("' + req.body.title + '", "' + req.body.title + '")', function(err, rows, fields){
+	  	console.log(req.body);
+	  	connection.query('INSERT INTO `nodejs_test_db`.`vladc_todo_list` (`title`, `description`) VALUES ("' + req.body.data.title + '", "' + req.body.data.title + '")', function(err, rows, fields){
 	  		res.send({body: rows, error:err});  	
 	  	});
 	  });
@@ -18,6 +19,7 @@ Route.prototype.init = function(connection) {
 	this.app.route('/api/tasks/:id')
 	  .get(function(req, res){
 	    connection.query('SELECT * FROM vladc_todo_list WHERE id = ' + req.params.id, function(err, rows, fields) {
+	    	console.log(rows);
 	        if(rows.length > 0){
 	       	 res.send({body: rows, error:err});
 		    }else {
