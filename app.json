@@ -1,0 +1,7 @@
+{
+	"apps": [{
+		"name": "TODO List",
+		"script": "app.js",
+		"watch": ["server", "client", "app"]
+	}]
+}

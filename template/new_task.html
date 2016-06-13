@@ -1,0 +1,26 @@
+<div ng-show="task == null" class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-Controller="NewTaskController">
+        <main class="mdl-layout__content">
+	        <div class="mdl-grid portfolio-max-width">
+				<form  method="POST" id="new-task-form" action="" style="width: 100%" ng-submit="submitForm()" name="newTask">
+				    <input name="title" class="mdl-textfield__input" type="text" placeholder="TITLE" ng-model="task.title">
+				    <textarea name="description" class="mdl-textfield__input" type="text" rows= "10"  placeholder="DESCRIPTION" ng-model="task.description"></textarea>
+				    <button class="mdl-button mdl-js-button mdl-button--raised" style="float:right; margin-top: 15px;" id="submit-form">Submit</button>
+				</form>
+			</div>
+        </main>
+</div>
+
+<div ng-show="task != null" class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-Controller="EditTaskController">
+        <main class="mdl-layout__content">
+        <div class="mdl-grid portfolio-max-width">
+				<form  method="POST" id="update-task-form" action="" style="width: 100%" ng-submit="submitForm()" name="updateTask">
+				    <input name="title" class="mdl-textfield__input" type="text" placeholder="TITLE" ng-model="task.title">
+				    <textarea name="description" class="mdl-textfield__input" type="text" rows= "10"  placeholder="DESCRIPTION" ng-model="task.description"></textarea>
+				    <button class="mdl-button mdl-js-button mdl-button--raised" style="float:right; margin-top: 15px;" id="submit-form">Save</button>
+				</form>
+			</div>
+        </main>
+</div>
+
+
+	
